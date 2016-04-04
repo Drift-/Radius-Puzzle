@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Puzzle Game</title>
+		<title>RADIUS - Puzzle Game</title>
+		
+		<!--Font-->
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 		
 		<!--CSS-->
 		<link rel="stylesheet" type="text/css" href="css/game.css">
@@ -12,14 +15,45 @@
 	<body>
 		<div id="wrapper">
 			<div id="game">
+				<div id="header">
+					<h1>RADIUS</h1>
+					<div id="header-top">
+						<div id="scores-container">
+							<div id="score">SCORE<br>0</div>
+							<div id="best">BEST<br>0</div>
+						</div>
+						<div id="restart" onclick="restartGame()"><img id="restartimg" src="images/restart.png" width="40px" height="40px"></div>
+						<div class="dropdown">
+							<div id="settings" onclick="triggerDropDownButton();" class="dropBtn settings_nottriggered"><img src="images/settings.png" width="40px" height="40px" class="dropBtn"></div>
+							<div id="myDropdown" class="dropdown-content">
+								<div onclick="newGame(4);"><p>4</p></div>
+								<div onclick="newGame(5);"><p>5</p></div>
+								<div onclick="newGame(6);"><p>6</p></div>
+							</div>
+						</div>
+					</div>
+					<p>Click the tiles to get a solid-colored board!</p>
+				</div>
+				<h3 id="end" class="notend">YOU WON!</h3>
 				<table id="gametable">
 				</table>
+				<p>Made by Drift: 
+					Website (Coming Soon!) |
+					<a target="_blank" href="https://github.com/Drift-">Github</a>
+				</p>
+				<p>How to Play: Click on the tiles with your mouse. This will change the colors of the surrounding tiles. Lowest score wins!</p>
+				<p>Share On: 
+					<a target="_blank" href="http://reddit.com/submit?url=http://drift-.github.io/Radius-Puzzle/">Reddit</a> | 
+					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://tinyurl.com/hwd6vbf">Facebook</a> | 
+					<a target="_blank" href="https://twitter.com/share?url=http://drift-.github.io/Radius-Puzzle/&text=Radius%20-%20puzzle%20game">Twitter</a> | 
+					<a target="_blank" href="https://plus.google.com/share?url=http://tinyurl.com/hwd6vbf">Google+</a>
+				</p>
 			</div>
 		</div>
 		
 		<!--Start the Script-->
 		<script type="text/javascript">
-			startGame();
+			startGame(5);
 		</script>
 	</body>
 </html>

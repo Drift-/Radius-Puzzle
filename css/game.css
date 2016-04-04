@@ -2,20 +2,132 @@ html, body , #wrapper {
 	width: 100%;
 	height: 100%;
 	margin: 0px;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 #wrapper {
 	text-align: center;
+	background-color: #90C3D4;
+	font-family: Inconsolata, monospace;
 }
 
 #game {
+	width: 474px;
 	display: inline-block;
 }
 
+#header-top {
+	margin: -30px 0px -40px 0px;
+	position: relative;
+}
+#header h1 {
+	margin: -5px 0px 20px 0px;
+	font-size: 50pt;
+	display: inline-block;
+}
+#scores-container {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 30px;
+}
+#score {
+	width: 50px;
+	height: 40px;
+	background-color: white;
+	border: 2px black solid;
+	border-radius: 5px;
+	display: inline-block;
+}
+#best {
+	width: 50px;
+	height: 40px;
+	background-color: white;
+	border: 2px black solid;
+	border-radius: 5px;
+	display: inline-block;
+}
+#restart {
+	width:40px;
+	height:40px;
+	background-color: white;
+	border: 2px black solid;
+	border-radius: 5px;
+	position: relative;
+	top: 9px;
+	display: inline-block;
+}
+#restart img {
+    -webkit-transition-duration: 0.25s;
+    -moz-transition-duration: 0.25s;
+     transition-duration: 0.25s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+     transition-property: transform;
+}
+.rotate {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+     transform: rotate(360deg);
+}
+#settings {
+	width:40px;
+	height:40px;
+	background-color: white;
+	position: relative;
+	top: 9px;
+	display: inline-block;
+}
+.settings_nottriggered {
+	border: 2px black solid;
+	border-radius: 5px;
+}
+.settings_triggered {
+	border: 2px black solid;
+	border-right-width: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#header p {
+	text-align: center;
+}
+
+#gametable {
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: -10px;
+	margin-top: -50px;
+	border: 2px solid black;
+	border-radius: 5px;
+}
+.fadeOut {
+	opacity: 0.5;
+	transition: opacity 1.5s ease-in-out;
+}
+
+.notend {
+	opacity: 0;
+	position: relative;
+	top: 59px;
+}
+.notend:hover {
+	cursor: default;
+}
+.end {
+	opacity: 1;
+	transition: opacity 1.5s ease-in-out;
+	position: relative;
+	top: 59px;
+}
+
+a {
+	text-decoration: underline;
+	color: black;
+}
+
 .tile {
-	width: 30px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
 	margin: 10px;
 	border: 2px solid black;
 	border-radius: 5px;
@@ -26,3 +138,46 @@ html, body , #wrapper {
 .tile.off {
 	background-color: white;
 }
+
+/* Dropdown Button */
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+	position: relative;
+	text-align: right;
+	width: 123px;
+	margin-left: -8px;
+	bottom: 7px;
+	border: 2px black solid;
+	border-left-width: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content div {
+    background-color: white;
+    text-decoration: none;
+	cursor: default;
+    display: inline-block;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-left: -8px;
+	border-left: 1px black solid;
+}
+.dropdown-content div p {
+	font-size: 30px;
+	margin-top: 3px;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:inline-block;}
